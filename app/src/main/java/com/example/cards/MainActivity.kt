@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(), OnHotelClickListener {
         recycler_view.setHasFixedSize(true)
     }
 
-    override fun onItemClick(item: HotelItem, position: Int) {
+    override fun onItemClick(item: HotelItem) {
         val intent = Intent(applicationContext, ViewCard::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         intent.putExtra("title", item.title)
@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity(), OnHotelClickListener {
             }
             list += HotelItem(drawable, "Hotel $i", "Descrierea hotelului $i")
         }
+
         return list
     }
 }

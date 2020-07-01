@@ -13,9 +13,9 @@ class ViewCard : AppCompatActivity() {
         val bundle = intent.extras
         if (bundle != null) {
             val image = bundle.getInt("resId")
-            imageExample.setImageResource(image)
+            hotelImage.setImageResource(image)
         }
-        exampleName.text = title
-        exampleDescription.text = description
+        hotelName.text = title
+        hotelDescription.text = description
     }
 }

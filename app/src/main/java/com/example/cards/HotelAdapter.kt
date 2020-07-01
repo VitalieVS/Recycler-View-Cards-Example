@@ -13,6 +13,7 @@ class HotelAdapter(
     private val hotelList: List<HotelItem>,
     private val clickListener: OnHotelClickListener
 ) : RecyclerView.Adapter<HotelAdapter.HotelViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotelViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_example, parent, false)
@@ -27,7 +28,7 @@ class HotelAdapter(
             itemView.hotelDescription.text = item.description
             itemView.hotelImage.setImageResource(item.imageResource)
             itemView.setOnClickListener {
-                action.onItemClick(item, adapterPosition)
+                action.onItemClick(item)
             }
         }
     }
@@ -38,5 +39,5 @@ class HotelAdapter(
 }
 
 interface OnHotelClickListener {
-    fun onItemClick(item: HotelItem, position: Int)
+    fun onItemClick(item: HotelItem)
 }
