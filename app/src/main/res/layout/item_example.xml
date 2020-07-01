@@ -2,40 +2,41 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    >
+    android:layout_margin="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_margin="4dp">
-    <ImageView
-        android:id="@+id/hotelImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/ic_android"
-        android:layout_marginRight="8dp" />
+        android:layout_margin="4dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/hotelImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_android" />
+
         <TextView
             android:id="@+id/hotelTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Denumire"
             android:layout_toEndOf="@id/hotelImage"
             android:layout_toRightOf="@id/hotelImage"
+            android:text="Denumire"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/hotelDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descriere"
+            android:layout_below="@id/hotelTitle"
             android:layout_toEndOf="@id/hotelImage"
             android:layout_toRightOf="@id/hotelImage"
-            android:layout_below="@id/hotelTitle"
-            />
+            android:text="Descriere" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
