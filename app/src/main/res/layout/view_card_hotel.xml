@@ -16,27 +16,27 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imageExample"
+            android:id="@+id/hotelImage"
             android:layout_width="match_parent"
             android:layout_height="96dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_android"
             tools:ignore="VectorDrawableCompat" />
         <TextView
-            android:id="@+id/exampleName"
+            android:id="@+id/hotelName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageExample"
+            android:layout_below="@id/hotelImage"
             android:layout_centerInParent="true"
             android:singleLine="true"
             android:text="Hotel Name"
             android:textSize="18sp"
             android:textStyle="bold" />
         <TextView
-            android:id="@+id/exampleDescription"
+            android:id="@+id/hotelDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/exampleName"
+            android:layout_below="@id/hotelName"
             android:layout_centerInParent="true"
             android:singleLine="true"
             android:text="Random one"
