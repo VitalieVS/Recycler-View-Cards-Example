@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity(), OnHotelClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val exampleList = generateList(20)
-        recycler_view.adapter = HotelAdapter(exampleList, this)
+        val hotelList = generateList(20)
+        recycler_view.adapter = HotelAdapter(hotelList, this)
         recycler_view.layoutManager = LinearLayoutManager(this)
         recycler_view.setHasFixedSize(true)
     }
@@ -34,8 +34,7 @@ class MainActivity : AppCompatActivity(), OnHotelClickListener {
                 1 -> R.drawable.ic_launcher_background
                 else -> R.drawable.ic_launcher_foreground
             }
-            val item = HotelItem(drawable, "Hotel $i", "Descrierea hotelului $i")
-            list += item
+            list += HotelItem(drawable, "Hotel $i", "Descrierea hotelului $i")
         }
         return list
     }

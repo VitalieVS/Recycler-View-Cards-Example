@@ -15,7 +15,7 @@ class ViewCard : AppCompatActivity() {
             val image = bundle.getInt("resId")
             imageExample.setImageResource(image)
         }
-      exampleName.text = title
-      exampleDescription.text = description
+        exampleName.text = title
+        exampleDescription.text = description
     }
 }
